@@ -1,9 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "KfT7FQ+00dOg9otBIomU8JbwiTWNPJI8pYU7xkcedf1OEcyy/KgwKkFWv6UW+mYkyZrKqyC50QQhAjuGVgRkPw==",
+  "dgSpecHash": "VwPWOLMvVoJ7vghPRNpcSKu8PsUP6rv0b74iC/rkcZE1iyVIVkY/uFXT2OTtjUP5ObrgiikwzjiQckYPnzAtag==",
   "success": true,
   "projectFilePath": "/Users/leonharf/Learning/Udemy/Reactivities/Application/Application.csproj",
   "expectedPackageFiles": [
+    "/Users/leonharf/.nuget/packages/automapper/12.0.0/automapper.12.0.0.nupkg.sha512",
+    "/Users/leonharf/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.0/automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "/Users/leonharf/.nuget/packages/mediatr/11.0.0/mediatr.11.0.0.nupkg.sha512",
+    "/Users/leonharf/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
+    "/Users/leonharf/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.0.0/mediatr.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "/Users/leonharf/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/microsoft.data.sqlite.core/6.0.4/microsoft.data.sqlite.core.6.0.4.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/microsoft.entityframeworkcore/6.0.4/microsoft.entityframeworkcore.6.0.4.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.4/microsoft.entityframeworkcore.abstractions.6.0.4.nupkg.sha512",

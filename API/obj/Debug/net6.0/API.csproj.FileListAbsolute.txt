@@ -66,3 +66,6 @@
 /Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/Application.pdb
 /Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/Domain.pdb
 /Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/Persistence.pdb
+/Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/MediatR.dll
+/Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/MediatR.Contracts.dll
+/Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/MediatR.Extensions.Microsoft.DependencyInjection.dll
