@@ -69,3 +69,10 @@
 /Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/MediatR.dll
 /Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/MediatR.Contracts.dll
 /Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/MediatR.Extensions.Microsoft.DependencyInjection.dll
+/Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/AutoMapper.dll
+/Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/leonharf/Learning/Udemy/Reactivities/API/obj/Debug/net6.0/staticwebassets/msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/leonharf/Learning/Udemy/Reactivities/API/obj/Debug/net6.0/staticwebassets/msbuild.build.API.props
+/Users/leonharf/Learning/Udemy/Reactivities/API/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.API.props
+/Users/leonharf/Learning/Udemy/Reactivities/API/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.API.props
+/Users/leonharf/Learning/Udemy/Reactivities/API/obj/Debug/net6.0/staticwebassets.pack.json
