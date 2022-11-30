@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "N/qdoNoh25uOpPzcLnu+KNSzQz32Dlp2Vt0Uk9lGtUGMK3g4cKcZCZs/7aGRZIPjKYkpShKyv9yIMxiIgLnKzw==",
+  "dgSpecHash": "7CZdIxHVgdstlHx4rCFvaqzPsU1HGl91lgFwiMaOwaMW7ryw6lrMhmTjtD2g2FWhPqxSvQIFfVNjOGcxkMLJhQ==",
   "success": true,
   "projectFilePath": "/Users/leonharf/Learning/Udemy/Reactivities/API/API.csproj",
   "expectedPackageFiles": [
     "/Users/leonharf/.nuget/packages/automapper/12.0.0/automapper.12.0.0.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.0/automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
+    "/Users/leonharf/.nuget/packages/fluentvalidation/11.2.1/fluentvalidation.11.2.1.nupkg.sha512",
+    "/Users/leonharf/.nuget/packages/fluentvalidation.aspnetcore/11.2.2/fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "/Users/leonharf/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.2.1/fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/mediatr/11.0.0/mediatr.11.0.0.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
