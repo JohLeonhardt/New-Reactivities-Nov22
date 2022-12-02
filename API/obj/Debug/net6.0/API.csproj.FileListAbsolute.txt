@@ -79,3 +79,4 @@
 /Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/FluentValidation.dll
 /Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/FluentValidation.AspNetCore.dll
 /Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "NHoOKWYpaXpPFRSuh5lQ2rjYBz80ApqR8CHM/vX0D5cB6Ky7stJk0vLoIL5YIClncc8zyWhcVA6h6Kep4NElhg==",
+  "dgSpecHash": "NIhGh8OEs0VfmGF0UzfqynWwrfQzZpy0YzLJkNQzUQU4BkWHhSYV+wcs3JcsD7vvvSFFebZ1+qHVKd8sV4KtAQ==",
   "success": true,
   "projectFilePath": "/Users/leonharf/Learning/Udemy/Reactivities/Persistence/Persistence.csproj",
   "expectedPackageFiles": [
+    "/Users/leonharf/.nuget/packages/microsoft.aspnetcore.cryptography.internal/5.0.1/microsoft.aspnetcore.cryptography.internal.5.0.1.nupkg.sha512",
+    "/Users/leonharf/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/5.0.1/microsoft.aspnetcore.cryptography.keyderivation.5.0.1.nupkg.sha512",
+    "/Users/leonharf/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/5.0.1/microsoft.aspnetcore.identity.entityframeworkcore.5.0.1.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/microsoft.data.sqlite.core/6.0.4/microsoft.data.sqlite.core.6.0.4.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/microsoft.entityframeworkcore/6.0.4/microsoft.entityframeworkcore.6.0.4.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.4/microsoft.entityframeworkcore.abstractions.6.0.4.nupkg.sha512",
@@ -17,6 +20,8 @@
     "/Users/leonharf/.nuget/packages/microsoft.extensions.dependencyinjection/6.0.0/microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/microsoft.extensions.dependencymodel/6.0.0/microsoft.extensions.dependencymodel.6.0.0.nupkg.sha512",
+    "/Users/leonharf/.nuget/packages/microsoft.extensions.identity.core/5.0.1/microsoft.extensions.identity.core.5.0.1.nupkg.sha512",
+    "/Users/leonharf/.nuget/packages/microsoft.extensions.identity.stores/5.0.1/microsoft.extensions.identity.stores.5.0.1.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/microsoft.extensions.logging/6.0.0/microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
