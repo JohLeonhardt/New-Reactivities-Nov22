@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link, useHistory, useParams } from 'react-router-dom';
 import { Button, Header, Segment } from 'semantic-ui-react';
 import { useStore } from '../../../app/stores/store';
-import LoadingComponent from '../../../app/layout/LoadingComponents';
+import LoadingComponent from '../../../app/layout/LoadingComponent';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import MyTextInput from '../../../app/common/form/MyTextInput';
