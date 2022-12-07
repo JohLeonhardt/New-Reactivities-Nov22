@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Container } from 'semantic-ui-react';
+import { Container, Modal } from 'semantic-ui-react';
 import Navbar from './Navbar';
 import { observer } from 'mobx-react-lite';
 import { Route, Switch, useLocation } from 'react-router-dom';
@@ -14,6 +14,7 @@ import ServerError from '../../features/errors/ServerError';
 import LoginForm from '../../features/users/LoginForm';
 import { useStore } from '../stores/store';
 import LoadingComponent from './LoadingComponent';
+import ModalContainer from '../common/modals/ModalContainer';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
   return (
     <>
       <ToastContainer position='bottom-right' hideProgressBar />
+      <ModalContainer />
       <Route exact path='/' component={HomePage} />
       <Route
         path={'/(.+)'}
