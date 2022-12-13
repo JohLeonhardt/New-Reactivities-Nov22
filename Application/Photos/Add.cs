@@ -1,6 +1,5 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Application.Core;
 using Application.Interfaces;
@@ -29,13 +28,12 @@ namespace Application.Photos
         _userAccessor = userAccessor;
         _photoAccessor = photoAccessor;
         _context = context;
-
       }
 
       public async Task<Result<Photo>> Handle(Command request, CancellationToken cancellationToken)
       {
         var user = await _context.Users.Include(p => p.Photos)
-        .FirstOrDefaultAsync(x => x.UserName == _userAccessor.GetUsername());
+            .FirstOrDefaultAsync(x => x.UserName == _userAccessor.GetUsername());
 
         if (user == null) return null;
 
@@ -43,8 +41,8 @@ namespace Application.Photos
 
         var photo = new Photo
         {
-            Url = photoUploadResult.Url,
-            Id = photoUploadResult.PublicId
+          Url = photoUploadResult.Url,
+          Id = photoUploadResult.PublicId
         };
 
         if (!user.Photos.Any(x => x.IsMain)) photo.IsMain = true;

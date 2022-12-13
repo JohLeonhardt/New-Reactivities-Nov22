@@ -26,7 +26,7 @@ namespace Persistence
       // This below will form primary key in our table
       builder.Entity<ActivityAttendee>(x => x.HasKey(aa => new { aa.AppUserId, aa.ActivityId }));
 
-// This below is our MANY to MANY releationship
+      // This below is our MANY to MANY releationship
       builder.Entity<ActivityAttendee>()
         .HasOne(u => u.AppUser)
         .WithMany(a => a.Activities)
