@@ -4,11 +4,9 @@ import {observer} from "mobx-react-lite";
 import { Profile } from '../../../app/models/profile';
 import { Link } from 'react-router-dom';
 import ProfileCard from '../../profiles/ProfileCard';
-
 interface Props {
     attendees: Profile[];
 }
-
 export default observer(function ActivityListItemAttendee({attendees}: Props) {
     return (
         <List horizontal>

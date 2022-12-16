@@ -19,8 +19,8 @@ export default observer(function ActivityForm() {
   const { createActivity, updateActivity, loadActivity, loadingInitial } = activityStore;
   const { id } = useParams();
   const navigate = useNavigate();
-  const [activity, setActivity] = useState<ActivityFormValues>(new ActivityFormValues());
 
+  const [activity, setActivity] = useState<ActivityFormValues>(new ActivityFormValues());
   const validationSchema = Yup.object({
     title: Yup.string().required('The event title is required'),
     category: Yup.string().required('The event category is required'),
@@ -29,11 +29,9 @@ export default observer(function ActivityForm() {
     venue: Yup.string().required(),
     city: Yup.string().required(),
   })
-
   useEffect(() => {
     if (id) loadActivity(id).then(activity => setActivity(new ActivityFormValues(activity)))
   }, [id, loadActivity])
-
   function handleFormSubmit(activity: ActivityFormValues) {
     if (!activity.id) {
       let newActivity = {
@@ -60,11 +58,9 @@ export default observer(function ActivityForm() {
             <MyTextArea rows={3} name='description' placeholder='Description' />
             <MySelectInput options={categoryOptions} name='category' placeholder='Category' />
             <MyDateInput name='date' placeholderText='Date' showTimeSelect timeCaption='time' dateFormat='MMMM d, yyyy h:mm aa' />
-
             <Header content='Location Details' sub color='teal' />
             <MyTextInput name='venue' placeholder='Venue' />
             <MyTextInput name='city' placeholder='city' />
-
             <Button
               disabled={isSubmitting || !dirty || !isValid}
               loading={isSubmitting}

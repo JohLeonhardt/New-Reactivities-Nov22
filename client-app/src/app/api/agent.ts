@@ -21,7 +21,7 @@ axios.interceptors.response.use(async response => {
     await sleep(1000);
     return response;
 }, (error: AxiosError) => {
-    const {data, status, config} = error.response as AxiosResponse;
+    const { data, status, config } = error.response as AxiosResponse;
     switch (status) {
         case 400:
             if (config.method === 'get' && data.errors.hasOwnProperty('id')) {
@@ -39,7 +39,7 @@ axios.interceptors.response.use(async response => {
                 toast.error(data);
             }
             break;
-        case 401: 
+        case 401:
             toast.error('unauthorised')
             break;
         case 403:
@@ -69,7 +69,6 @@ const Activities = {
     delete: (id: string) => requests.del<void>(`/activities/${id}`),
     attend: (id: string) => requests.post<void>(`/activities/${id}/attend`, {})
 }
-
 const Account = {
     current: () => requests.get<User>('account'),
     login: (user: UserFormValues) => requests.post<User>('/account/login', user),
@@ -78,16 +77,15 @@ const Account = {
 
 const Profiles = {
     get: (username: string) => requests.get<Profile>(`/profiles/${username}`),
-    uploadPhoto: (file: Blob) => {
+    uploadPhoto: (file: any) => {
         let formData = new FormData();
         formData.append('File', file);
         return axios.post<Photo>('photos', formData, {
-            headers: {'Content-Type': 'multipart/form-data'}
-        });
+            headers: { 'Content-Type': 'multipart/form-data' }
+        })
     },
-
-    setMainPhoto: (id: string) => requests.post(`/photos/${id}/setMain`, {}),
-    deletePhoto: (id: string) => requests.del(`/photos/${id}`)
+    setMainPhoto: (id: string) => axios.post(`/photos/${id}/setMain`, {}),
+    deletePhoto: (id: string) => axios.delete(`/photos/${id}`)
 }
 
 const agent = {
@@ -95,4 +93,5 @@ const agent = {
     Account,
     Profiles
 }
+
 export default agent;
