@@ -1,4 +1,5 @@
 using System.Text;
+using System.Threading.Tasks;
 using API.Services;
 using Domain;
 using Infrastructure.Security;
@@ -22,7 +23,9 @@ namespace API.Extensions
       })
       .AddEntityFrameworkStores<DataContext>()
       .AddSignInManager<SignInManager<AppUser>>();
+
       var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["TokenKey"]));
+
       services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
           .AddJwtBearer(opt =>
           {
@@ -32,6 +35,19 @@ namespace API.Extensions
               IssuerSigningKey = key,
               ValidateIssuer = false,
               ValidateAudience = false
+            };
+            opt.Events = new JwtBearerEvents
+            {
+              OnMessageReceived = context =>
+              {
+                var accessToken = context.Request.Query["access_token"];
+                var path = context.HttpContext.Request.Path;
+                if (!string.IsNullOrEmpty(accessToken) && (path.StartsWithSegments("/chat")))
+                {
+                  context.Token = accessToken;
+                }
+                return Task.CompletedTask;
+              }
             };
           });
 
