@@ -3,7 +3,6 @@ import { Activity, ActivityFormValues } from "../models/activity";
 import agent from "../api/agent";
 import { store } from "./store";
 import { Profile } from "../models/profile";
-
 export default class ActivityStore {
   activityRegistry = new Map<string, Activity>();
   selectedActivity?: Activity = undefined;
@@ -120,7 +119,7 @@ export default class ActivityStore {
       })
     }
   }
-  updateAttendance = async () => {
+  updateAttendeance = async () => {
     const user = store.userStore.user;
     this.loading = true;
     try {
@@ -155,5 +154,9 @@ export default class ActivityStore {
     } finally {
       runInAction(() => this.loading = false);
     }
+  }
+
+  clearSelectedActivity = () => {
+    this.selectedActivity = undefined;
   }
 }

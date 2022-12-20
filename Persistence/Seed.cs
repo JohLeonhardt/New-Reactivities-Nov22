@@ -3,14 +3,14 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Persistence
 {
-    public class Seed
+  public class Seed
+  {
+    public static async Task SeedData(DataContext context,
+        UserManager<AppUser> userManager)
     {
-        public static async Task SeedData(DataContext context,
-            UserManager<AppUser> userManager)
-        {
-            if (!userManager.Users.Any() && !context.Activities.Any())
-            {
-                var users = new List<AppUser>
+      if (!userManager.Users.Any() && !context.Activities.Any())
+      {
+        var users = new List<AppUser>
                 {
                     new AppUser
                     {
@@ -32,12 +32,12 @@ namespace Persistence
                     },
                 };
 
-                foreach (var user in users)
-                {
-                    await userManager.CreateAsync(user, "Pa$$w0rd");
-                }
+        foreach (var user in users)
+        {
+          await userManager.CreateAsync(user, "Pa$$w0rd");
+        }
 
-                var activities = new List<Activity>
+        var activities = new List<Activity>
                 {
                     new Activity
                     {
@@ -135,12 +135,12 @@ namespace Persistence
                             new ActivityAttendee
                             {
                                 AppUser = users[1],
-                                IsHost = true                            
+                                IsHost = true
                             },
                             new ActivityAttendee
                             {
                                 AppUser = users[0],
-                                IsHost = false                            
+                                IsHost = false
                             },
                         }
                     },
@@ -157,7 +157,7 @@ namespace Persistence
                             new ActivityAttendee
                             {
                                 AppUser = users[1],
-                                IsHost = true                            
+                                IsHost = true
                             }
                         }
                     },
@@ -174,12 +174,12 @@ namespace Persistence
                             new ActivityAttendee
                             {
                                 AppUser = users[0],
-                                IsHost = true                            
+                                IsHost = true
                             },
                             new ActivityAttendee
                             {
                                 AppUser = users[1],
-                                IsHost = false                            
+                                IsHost = false
                             },
                         }
                     },
@@ -196,12 +196,12 @@ namespace Persistence
                             new ActivityAttendee
                             {
                                 AppUser = users[2],
-                                IsHost = true                            
+                                IsHost = true
                             },
                             new ActivityAttendee
                             {
                                 AppUser = users[1],
-                                IsHost = false                            
+                                IsHost = false
                             },
                         }
                     },
@@ -218,12 +218,12 @@ namespace Persistence
                             new ActivityAttendee
                             {
                                 AppUser = users[0],
-                                IsHost = true                            
+                                IsHost = true
                             },
                             new ActivityAttendee
                             {
                                 AppUser = users[2],
-                                IsHost = false                            
+                                IsHost = false
                             },
                         }
                     },
@@ -240,20 +240,20 @@ namespace Persistence
                             new ActivityAttendee
                             {
                                 AppUser = users[2],
-                                IsHost = true                            
+                                IsHost = true
                             },
                             new ActivityAttendee
                             {
                                 AppUser = users[1],
-                                IsHost = false                            
+                                IsHost = false
                             },
                         }
                     }
                 };
 
-                await context.Activities.AddRangeAsync(activities);
-                await context.SaveChangesAsync();
-            }
-        }
+        await context.Activities.AddRangeAsync(activities);
+        await context.SaveChangesAsync();
+      }
     }
+  }
 }

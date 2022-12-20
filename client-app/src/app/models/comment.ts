@@ -6,4 +6,3 @@ export interface ChatComment {
   displayName: string;
   image: string;
 }
-

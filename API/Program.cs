@@ -11,6 +11,7 @@ using Persistence;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
 builder.Services.AddControllers(opt =>
 {
   var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
@@ -29,6 +30,7 @@ if (app.Environment.IsDevelopment())
   app.UseSwagger();
   app.UseSwaggerUI();
 }
+
 app.UseCors("CorsPolicy");
 
 app.UseAuthentication();
@@ -52,4 +54,5 @@ catch (Exception ex)
   var logger = services.GetRequiredService<ILogger<Program>>();
   logger.LogError(ex, "An error occured during migration");
 }
+
 app.Run();
