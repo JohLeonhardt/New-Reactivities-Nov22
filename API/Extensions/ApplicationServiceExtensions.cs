@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Application.Activities;
 using Application.Core;
 using Application.Interfaces;
+using AutoMapper;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Infrastructure.Photos;

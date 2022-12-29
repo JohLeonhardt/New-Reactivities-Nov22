@@ -3,15 +3,18 @@ import { Activity, ActivityFormValues } from "../models/activity";
 import agent from "../api/agent";
 import { store } from "./store";
 import { Profile } from "../models/profile";
+
 export default class ActivityStore {
   activityRegistry = new Map<string, Activity>();
   selectedActivity?: Activity = undefined;
   editMode = false;
   loading = false;
   loadingInitial = false;
+
   constructor() {
     makeAutoObservable(this)
   }
+
   get groupedActivities() {
     return Object.entries(
       this.activitiesByDate.reduce((activities, activity) => {
@@ -21,10 +24,12 @@ export default class ActivityStore {
       }, {} as { [key: string]: Activity[] })
     )
   }
+
   get activitiesByDate() {
     return Array.from(this.activityRegistry.values()).sort((a, b) =>
       a.date!.getTime() - b.date!.getTime());
   }
+
   loadActivities = async () => {
     this.setLoadingInitial(true);
     try {
@@ -38,6 +43,7 @@ export default class ActivityStore {
       this.setLoadingInitial(false);
     }
   }
+
   loadActivity = async (id: string) => {
     let activity = this.getActivity(id);
     if (activity) {
@@ -58,6 +64,7 @@ export default class ActivityStore {
       }
     }
   }
+
   private setActivity = (activity: Activity) => {
     const user = store.userStore.user;
     if (user) {
@@ -70,12 +77,15 @@ export default class ActivityStore {
     activity.date = new Date(activity.date!);
     this.activityRegistry.set(activity.id, activity);
   }
+
   private getActivity = (id: string) => {
     return this.activityRegistry.get(id);
   }
+
   setLoadingInitial = (state: boolean) => {
     this.loadingInitial = state;
   }
+
   createActivity = async (activity: ActivityFormValues) => {
     const user = store.userStore!.user;
     const profile = new Profile(user!);
@@ -90,6 +100,7 @@ export default class ActivityStore {
       console.log(error);
     }
   }
+
   updateActivity = async (activity: ActivityFormValues) => {
     try {
       await agent.Activities.update(activity);
@@ -104,6 +115,7 @@ export default class ActivityStore {
       console.log(error);
     }
   }
+
   deleteActivity = async (id: string) => {
     this.loading = true;
     try {
@@ -119,7 +131,8 @@ export default class ActivityStore {
       })
     }
   }
-  updateAttendeance = async () => {
+
+  updateAttendance = async () => {
     const user = store.userStore.user;
     this.loading = true;
     try {
@@ -141,6 +154,7 @@ export default class ActivityStore {
       runInAction(() => this.loading = false);
     }
   }
+
   cancelActivityToggle = async () => {
     this.loading = true;
     try {

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Tokens;
 using Persistence;
+
 namespace API.Extensions
 {
   public static class IdentityServiceExtensions
@@ -19,7 +20,9 @@ namespace API.Extensions
         opt.User.RequireUniqueEmail = true;
       })
       .AddEntityFrameworkStores<DataContext>();
+
       var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["TokenKey"]));
+
       services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
           .AddJwtBearer(opt =>
           {
@@ -52,8 +55,10 @@ namespace API.Extensions
             policy.Requirements.Add(new IsHostRequirement());
           });
       });
+
       services.AddTransient<IAuthorizationHandler, IsHostRequirementHandler>();
       services.AddScoped<TokenService>();
+      
       return services;
     }
   }

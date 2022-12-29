@@ -3,14 +3,18 @@ import agent from "../api/agent";
 import { User, UserFormValues } from "../models/user";
 import { router } from "../router/Routes";
 import { store } from "./store";
+
 export default class UserStore {
     user: User | null = null;
+
     constructor() {
         makeAutoObservable(this)
     }
+
     get isLoggedIn() {
         return !!this.user;
     }
+
     login = async (creds: UserFormValues) => {
         try {
             const user = await agent.Account.login(creds);
@@ -22,6 +26,7 @@ export default class UserStore {
             throw error;
         }
     }
+
     register = async (creds: UserFormValues) => {
         try {
             const user = await agent.Account.register(creds);
@@ -33,11 +38,13 @@ export default class UserStore {
             throw error;
         }
     }
+
     logout = () => {
         store.commonStore.setToken(null);
         this.user = null;
         router.navigate('/');
     }
+
     getUser = async () => {
         try {
             const user = await agent.Account.current();
@@ -46,9 +53,11 @@ export default class UserStore {
             console.log(error);
         }
     }
+
     setImage = (image: string) => {
         if (this.user) this.user.image = image;
     }
+    
     setUserPhoto = (url: string) => {
         if (this.user) this.user.image = url;
     }
