@@ -13,8 +13,7 @@ export default observer(function ActivityDetails() {
     const { activityStore } = useStore();
     const { selectedActivity: activity, loadActivity, loadingInitial, clearSelectedActivity } = activityStore;
     const { id } = useParams();
-    // const { id } = useParams<{id: string}>();
-
+    
     useEffect(() => {
         if (id) loadActivity(id);
         return () => clearSelectedActivity();
