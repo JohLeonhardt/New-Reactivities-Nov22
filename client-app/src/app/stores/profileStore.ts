@@ -9,15 +9,19 @@ export default class ProfileStore {
     loadingProfile = false;
     uploading = false;
     loading = false;
+    followings: Profile[] = [];
+
     constructor() {
         makeAutoObservable(this);
     }
+
     get isCurrentUser() {
         if (store.userStore.user && this.profile) {
             return store.userStore.user.username === this.profile.username;
         }
         return false;
     }
+
     loadProfile = async (username: string) => {
         this.loadingProfile = true;
         try {
@@ -33,6 +37,7 @@ export default class ProfileStore {
             })
         }
     }
+
     uploadPhoto = async (file: any) => {
         this.uploading = true;
         try {
@@ -53,6 +58,7 @@ export default class ProfileStore {
             runInAction(() => this.uploading = false);
         }
     }
+
     setMainPhoto = async (photo: Photo) => {
         this.loading = true;
         try {
@@ -71,6 +77,7 @@ export default class ProfileStore {
             runInAction(() => this.loading = false);
         }
     }
+
     deletePhoto = async (photo: Photo) => {
         this.loading = true;
         try {
@@ -97,6 +104,30 @@ export default class ProfileStore {
                     store.userStore.setDisplayName(profile.displayName);
                 }
                 this.profile = { ...this.profile, ...profile as Profile };
+                this.loading = false;
+            })
+        } catch (error) {
+            console.log(error);
+            runInAction(() => this.loading = false);
+        }
+    }
+
+    updateFollowing = async (username: string, following: boolean) => {
+        this.loading = true;
+        try {
+            await agent.Profiles.updateFollowing(username);
+            store.activityStore.updateAttendeeFollowing(username);
+            runInAction(() => {
+                if (this.profile && this.profile. username !== store.userStore.user?.username) {
+                    following ? this.profile.followersCount++ : this.profile.followersCount--;
+                    this.profile.following = !this.profile.following;
+                }
+                this.followings.forEach(profile => {
+                    if (profile.username === username) {
+                        profile.following ? profile.followersCount-- : profile.followersCount++;
+                        profile.following = !profile.following;
+                    }
+                })
                 this.loading = false;
             })
         } catch (error) {
