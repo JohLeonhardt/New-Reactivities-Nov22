@@ -5,7 +5,7 @@ import { Activity } from '../../../app/models/activity'
 interface Props {
     activity: Activity
 }
-export default observer(function ActivityDetailedSidebar ({activity: {attendees, host}}: Props) {
+export default observer(function ActivityDetailedSidebar({ activity: { attendees, host } }: Props) {
     if (!attendees) return null;
     return (
         <>
@@ -24,20 +24,20 @@ export default observer(function ActivityDetailedSidebar ({activity: {attendees,
                     {attendees.map(attendee => (
                         <Item key={attendee.username} style={{ position: 'relative' }}>
                             {attendee.username === host?.username &&
-                            <Label
-                                style={{ position: 'absolute' }}
-                                color='orange'
-                                ribbon='right'
-                            >
-                                Host
-                            </Label>}
+                                <Label
+                                    style={{ position: 'absolute' }}
+                                    color='orange'
+                                    ribbon='right'
+                                >
+                                    Host
+                                </Label>}
                             <Image size='tiny' src={'/assets/user.png'} />
                             <Item.Content verticalAlign='middle'>
                                 <Item.Header as='h3'>
                                     <Link to={`/profiles/${attendee.username}`}>{attendee.displayName}</Link>
                                 </Item.Header>
-                                {attendee.following && 
-                                <Item.Extra style={{ color: 'orange' }}>Following</Item.Extra>}
+                                {attendee.following &&
+                                    <Item.Extra style={{ color: 'orange' }}>Following</Item.Extra>}
                             </Item.Content>
                         </Item>
                     ))}

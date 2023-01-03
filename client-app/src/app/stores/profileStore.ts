@@ -3,7 +3,6 @@ import { makeAutoObservable, reaction, runInAction } from "mobx";
 import agent from "../api/agent";
 import { toast } from "react-toastify";
 import { store } from "./store";
-
 export default class ProfileStore {
     profile: Profile | null = null;
     loadingProfile = false;
@@ -11,7 +10,7 @@ export default class ProfileStore {
     loading = false;
     followings: Profile[] = [];
     loadingFollowings = false;
-    activeTab = 0;
+    activeTab: number = 0;
 
     constructor() {
         makeAutoObservable(this);
@@ -23,7 +22,7 @@ export default class ProfileStore {
                     const predicate = activeTab === 3 ? 'followers' : 'following';
                     this.loadFollowings(predicate);
                 } else {
-                    this.followings = []
+                    this.followings = [];
                 }
             }
         )
@@ -39,7 +38,6 @@ export default class ProfileStore {
         }
         return false;
     }
-
     loadProfile = async (username: string) => {
         this.loadingProfile = true;
         try {
@@ -55,7 +53,6 @@ export default class ProfileStore {
             })
         }
     }
-
     uploadPhoto = async (file: any) => {
         this.uploading = true;
         try {
@@ -76,7 +73,6 @@ export default class ProfileStore {
             runInAction(() => this.uploading = false);
         }
     }
-
     setMainPhoto = async (photo: Photo) => {
         this.loading = true;
         try {
@@ -95,7 +91,6 @@ export default class ProfileStore {
             runInAction(() => this.loading = false);
         }
     }
-
     deletePhoto = async (photo: Photo) => {
         this.loading = true;
         try {
@@ -111,7 +106,6 @@ export default class ProfileStore {
             this.loading = false;
         }
     }
-
     updateProfile = async (profile: Partial<Profile>) => {
         this.loading = true;
         try {
@@ -136,7 +130,9 @@ export default class ProfileStore {
             await agent.Profiles.updateFollowing(username);
             store.activityStore.updateAttendeeFollowing(username);
             runInAction(() => {
-                if (this.profile && this.profile. username !== store.userStore.user?.username && this.profile.username === username) {
+                if (this.profile
+                    && this.profile.username !== store.userStore.user?.username
+                    && this.profile.username === username) {
                     following ? this.profile.followersCount++ : this.profile.followersCount--;
                     this.profile.following = !this.profile.following;
                 }
@@ -145,7 +141,7 @@ export default class ProfileStore {
                 }
                 this.followings.forEach(profile => {
                     if (profile.username === username) {
-                        profile.following ? profile.followersCount-- : profile.followersCount++;
+                        profile.following ? profile.followersCount-- : profile.followersCount++
                         profile.following = !profile.following;
                     }
                 })

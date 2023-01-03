@@ -9,6 +9,7 @@ import { useStore } from '../../../app/stores/store';
 const activityImageStyle = {
   filter: 'brightness(30%)'
 };
+
 const activityImageTextStyle = {
   position: 'absolute',
   bottom: '5%',
@@ -17,6 +18,7 @@ const activityImageTextStyle = {
   height: 'auto',
   color: 'white'
 };
+
 interface Props {
   activity: Activity
 }

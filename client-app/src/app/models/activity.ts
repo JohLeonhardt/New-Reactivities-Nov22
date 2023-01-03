@@ -1,25 +1,18 @@
 import { Profile } from "./profile";
-
 export interface Activity {
     id: string;
     title: string;
-    date: Date | null;
     description: string;
     category: string;
+    date: Date | null;
     city: string;
     venue: string;
-    hostUsername: string;
-    isCancelled: boolean;
-    isGoing: boolean;
-    isHost: boolean;
-    host?: Profile;
+    hostUsername?: string;
+    isCancelled?: boolean;
+    isGoing?: boolean;
+    isHost?: boolean
     attendees: Profile[]
-}
-
-export class Activity implements Activity {
-    constructor(init?: ActivityFormValues) {
-        Object.assign(this, init);
-    }
+    host?: Profile;
 }
 
 export class ActivityFormValues {
@@ -30,7 +23,6 @@ export class ActivityFormValues {
     date: Date | null = null;
     city: string = '';
     venue: string = '';
-
     constructor(activity?: ActivityFormValues) {
         if (activity) {
             this.id = activity.id;
@@ -41,5 +33,10 @@ export class ActivityFormValues {
             this.venue = activity.venue;
             this.city = activity.city;
         }
+    }
+}
+export class Activity implements Activity {
+    constructor(init?: ActivityFormValues) {
+        Object.assign(this, init);
     }
 }

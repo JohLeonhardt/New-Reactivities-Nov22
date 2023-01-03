@@ -17,10 +17,9 @@ export default observer(function ProfilePage() {
     return () => {
       setActiveTab(0);
     }
-  }, [loadProfile, username, setActiveTab])
+  }, [loadProfile, username])
 
   if (loadingProfile) return <LoadingComponent inverted content='Loading profile...' />
-
   if (!profile) return <h2>Problem loading profile</h2>
 
   return (
