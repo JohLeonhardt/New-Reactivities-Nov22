@@ -68,7 +68,8 @@ const requests = {
     del: <T>(url: string) => axios.delete<T>(url).then(responseBody)
 }
 const Activities = {
-    list: () => requests.get<PaginatedResult<Activity[]>>(`/activities`),
+    list: (params: URLSearchParams) => axios.get<PaginatedResult<Activity[]>>('/activities', {params})
+        .then(responseBody),
     details: (id: string) => requests.get<Activity>(`/activities/${id}`),
     create: (activity: ActivityFormValues) => requests.post<void>(`/activities`, activity),
     update: (activity: ActivityFormValues) => requests.put<void>(`/activities/${activity.id}`, activity),
