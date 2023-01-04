@@ -10,8 +10,8 @@ export class PaginatedResult<T> {
   pagination: Pagination;
 
   constructor(data: T, pagination: Pagination) {
-    this.data = data;
-    this.pagination = pagination;
+      this.data = data;
+      this.pagination = pagination;
   }
 }
 
@@ -20,7 +20,7 @@ export class PagingParams {
   pageSize;
 
   constructor(pageNumber = 1, pageSize = 2) {
-    this.pageNumber = pageNumber;
-    this.pageSize = pageSize;
+      this.pageNumber = pageNumber;
+      this.pageSize = pageSize;
   }
 }
