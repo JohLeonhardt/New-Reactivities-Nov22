@@ -85,3 +85,5 @@
 /Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/CloudinaryDotNet.dll
 /Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/Newtonsoft.Json.dll
 /Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/API.staticwebassets.runtime.json
+/Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/NWebsec.AspNetCore.Core.dll
+/Users/leonharf/Learning/Udemy/Reactivities/API/bin/Debug/net6.0/NWebsec.AspNetCore.Middleware.dll

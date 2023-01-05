@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "g6FDYcQDHG87OfMPlhDKQ2I8OfU8V+oPzVcxNuMmciU6BS96bm+HZ1O4OS7wBbFa5Szm3PP3bnab7EhiyVBGpQ==",
+  "dgSpecHash": "UZmYOHTKiWvvse+MQhr+do5tM83jsj4cxl4DCPABl2T44tC7Vn12OKYzY/FARDYsfYOVfakQmtATdRr+Fewb0Q==",
   "success": true,
   "projectFilePath": "/Users/leonharf/Learning/Udemy/Reactivities/API/API.csproj",
   "expectedPackageFiles": [
@@ -52,6 +52,8 @@
     "/Users/leonharf/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/npgsql/6.0.4/npgsql.6.0.4.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/npgsql.entityframeworkcore.postgresql/6.0.4/npgsql.entityframeworkcore.postgresql.6.0.4.nupkg.sha512",
+    "/Users/leonharf/.nuget/packages/nwebsec.aspnetcore.core/3.0.0/nwebsec.aspnetcore.core.3.0.0.nupkg.sha512",
+    "/Users/leonharf/.nuget/packages/nwebsec.aspnetcore.middleware/3.0.0/nwebsec.aspnetcore.middleware.3.0.0.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.0.6/sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/sqlitepclraw.core/2.0.6/sqlitepclraw.core.2.0.6.nupkg.sha512",
     "/Users/leonharf/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.0.6/sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",

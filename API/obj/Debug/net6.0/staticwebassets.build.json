@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7uDQvYzaL0MW3Dq99kgwkeLwzkxp/j/Br1kaX2nmcKo=",
+  "Hash": "yxCodXgSfvAJKOqQNNo9Ignx4MqR+HqvOXrMDILVZIA=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -374,12 +374,12 @@
       "OriginalItemSpec": "wwwroot/static/js/787.627756db.chunk.js.map"
     },
     {
-      "Identity": "/Users/leonharf/Learning/Udemy/Reactivities/API/wwwroot/static/js/main.b7776150.js",
+      "Identity": "/Users/leonharf/Learning/Udemy/Reactivities/API/wwwroot/static/js/main.9bb9cab4.js",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/leonharf/Learning/Udemy/Reactivities/API/wwwroot/",
       "BasePath": "_content/API",
-      "RelativePath": "static/js/main.b7776150.js",
+      "RelativePath": "static/js/main.9bb9cab4.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -388,15 +388,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/static/js/main.b7776150.js"
+      "OriginalItemSpec": "wwwroot/static/js/main.9bb9cab4.js"
     },
     {
-      "Identity": "/Users/leonharf/Learning/Udemy/Reactivities/API/wwwroot/static/js/main.b7776150.js.LICENSE.txt",
+      "Identity": "/Users/leonharf/Learning/Udemy/Reactivities/API/wwwroot/static/js/main.9bb9cab4.js.LICENSE.txt",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/leonharf/Learning/Udemy/Reactivities/API/wwwroot/",
       "BasePath": "_content/API",
-      "RelativePath": "static/js/main.b7776150.js.LICENSE.txt",
+      "RelativePath": "static/js/main.9bb9cab4.js.LICENSE.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -405,15 +405,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/static/js/main.b7776150.js.LICENSE.txt"
+      "OriginalItemSpec": "wwwroot/static/js/main.9bb9cab4.js.LICENSE.txt"
     },
     {
-      "Identity": "/Users/leonharf/Learning/Udemy/Reactivities/API/wwwroot/static/js/main.b7776150.js.map",
+      "Identity": "/Users/leonharf/Learning/Udemy/Reactivities/API/wwwroot/static/js/main.9bb9cab4.js.map",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/leonharf/Learning/Udemy/Reactivities/API/wwwroot/",
       "BasePath": "_content/API",
-      "RelativePath": "static/js/main.b7776150.js.map",
+      "RelativePath": "static/js/main.9bb9cab4.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -422,7 +422,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/static/js/main.b7776150.js.map"
+      "OriginalItemSpec": "wwwroot/static/js/main.9bb9cab4.js.map"
     },
     {
       "Identity": "/Users/leonharf/Learning/Udemy/Reactivities/API/wwwroot/static/media/brand-icons.278156e41e0ad908cf7f.woff2",
